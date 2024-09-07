@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black-main: #131313;
+    --white-main: rgba(249, 249, 249);
+}
+
+body {
+    background-color: var(--black-main);
+    color: var(--white-main);
+}
