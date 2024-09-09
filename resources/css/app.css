@@ -1,15 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'figtree';
 }
 
-:root {
-    --black-main: #131313;
-    --white-main: rgba(249, 249, 249);
-}
-
-body {
-    background-color: var(--black-main);
-    color: var(--white-main);
+.btn {
+    @apply px-3;
+    @apply h-9;
+    @apply min-h-9;
 }
