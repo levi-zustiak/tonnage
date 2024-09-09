@@ -1,5 +1,3 @@
-import daisyui from "daisyui";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./resources/**/*.{ts,tsx}'],
@@ -7,7 +5,11 @@ export default {
     extend: {},
   },
   plugins: [
-      daisyui
+      require('@tailwindcss/typography'),
+      require('daisyui')
   ],
+    daisyui: {
+      themes: ['bumblebee']
+    }
 }
 
