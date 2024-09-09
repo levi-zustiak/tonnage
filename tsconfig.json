@@ -1,10 +1,9 @@
 {
     "compilerOptions": {
-        "baseUrl": "resources/ts",
         "paths": {
-            "components/*": ["components/*"],
-            "layouts/*": ["layouts/*"],
-            "types/*": ["types/*"]
+            "@/*": [
+                "./resources/ts/*"
+            ],
         },
         "target": "ESNext",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
