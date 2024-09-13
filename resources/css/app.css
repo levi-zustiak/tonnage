@@ -9,6 +9,15 @@
     font-family: 'figtree';
 }
 
+.layout {
+    display: grid;
+    min-height: 100vh;
+    width: 100vw;
+    grid-template:
+        "nav" min-content
+        "content" 1fr;
+}
+
 .btn {
     @apply px-3;
     @apply h-9;

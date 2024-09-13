@@ -10,18 +10,27 @@ void createInertiaApp({
             eager: true,
         });
 
-        const layouts = Object.entries(import.meta.glob('./pages/'))
+        const layouts = Object.entries(
+            import.meta.glob('./pages/**/*layout.tsx', {
+                import: 'Layout',
+                eager: true,
+            }),
+        )
             .filter(([file]) => {
                 const pattern = /\.\/pages|\/layout\.tsx/g;
 
-                return path.includes(file.replace(pattern, ''));
+                const path = file.replace(pattern, '');
+
+                return path.includes(path);
             })
             .sort(([keyA], [keyB]) => keyA.length - keyB.length)
-            .map(([file, layout]) => layout);
+            .map(([_, layout]) => layout);
 
         const page = pages[`./pages/${path}/page.tsx`];
 
-        // page.layout = layouts;
+        console.log(layouts);
+
+        page.layout = layouts;
 
         return page;
     },

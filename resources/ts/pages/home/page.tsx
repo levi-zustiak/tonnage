@@ -3,8 +3,8 @@ import { Navigation } from './components/Navigation';
 
 export function Page(): ReactElement {
     return (
-        <main>
-            <Navigation />
-        </main>
+        <>
+            <h1 className="text-6xl text-bold">Home</h1>
+        </>
     );
 }
